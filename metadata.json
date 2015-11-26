@@ -1,0 +1,14 @@
+{
+  "name": "b3n4kh-owncloud",
+  "version": "0.1.0",
+  "author": "b3n4kh",
+  "summary": "Install owncloud to be serverd with a postgresql database behind a nginx reverseproxy",
+  "license": "Beerware",
+  "source": "https://github.com/b3n4kh/owncloud-puppet",
+  "project_page": "https://github.com/b3n4kh/owncloud-puppet",
+  "issues_url": "https://github.com/b3n4kh/owncloud-puppet/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
