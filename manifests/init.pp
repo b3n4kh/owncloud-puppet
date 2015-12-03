@@ -8,6 +8,8 @@ class owncloud (
   $db_user         = $::owncloud::params::db_user,
   $db_type         = $::owncloud::params::db_type,
   $sslkey          = $::owncloud::params::sslkey,
+  $www_user        = $::owncloud::params::www_user,
+  $www_group       = $::owncloud::params::www_group,
   $sslcert         = $::owncloud::params::sslcert,
   $nginx_vhosts    = $::owncloud::params::nginx_vhosts,
   $manage_db       = $::owncloud::params::manage_db,
@@ -22,8 +24,8 @@ class owncloud (
 
   file { "${::owncloud::documentroot}/config/autoconfig.php":
     ensure  => present,
-    owner   => $::owncloud::www_user,
-    group   => $::owncloud::www_group,
+    owner   => $www_user,
+    group   => $www_group,
     content => template('owncloud/autoconfig.php.erb'),
   }
 
