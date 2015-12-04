@@ -4,10 +4,7 @@
 #
 class owncloud::apache {
 
-  class { '::apache':
-    default_vhost => false,
-    mpm_module    => 'prefork',
-    purge_configs => false,
+  class { 'apache':
+    template => 'owncloud/httpd.conf.erb',
   }
-  apache::listen { '8888': }
 }

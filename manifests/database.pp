@@ -1,9 +1,12 @@
 #Configure owncloud postgres database
-define owncloud::database (
+class owncloud::database (
   $dbname     = $name,
   $dbuser     = undef,
   $dbpassword = undef
   ) {
+
+  class { 'postgresql::server': }
+
   postgresql::server::db { $dbname:
     name     => $dbname,
     user     => $dbuser,

@@ -12,8 +12,8 @@ class owncloud::params {
   $manage_repo     = true
   $nginx_snippet   = true
   $nginx_vhosts    = [ 'owncloud' ]
-  $sslkey          = '/etc/pki/tls/private/owncloud.key'
   $sslcert         = '/etc/pki/tls/certs/owncloud.crt'
+  $sslkey          = '/etc/pki/tls/private/owncloud.key'
   $www_user        = 'apache'
   $www_group       = 'apache'
 }

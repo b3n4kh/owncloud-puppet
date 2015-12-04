@@ -1,5 +1,5 @@
 #Configure owncloud nginx vhost
-define owncloud::nginx (
+class owncloud::nginx (
   $vhosts     = [ $name ],
   $sslkey     = undef,
   $sslcert    = undef
