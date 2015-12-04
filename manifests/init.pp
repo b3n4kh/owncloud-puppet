@@ -22,6 +22,11 @@ class owncloud (
   validate_absolute_path($sslkey)
   validate_absolute_path($sslcert)
 
+  file { "${::owncloud::documentroot}/config":
+    ensure  => directory,
+    owner   => $www_user,
+    group   => $www_group,
+  }
 
   file { "${::owncloud::documentroot}/config/autoconfig.php":
     ensure  => present,
