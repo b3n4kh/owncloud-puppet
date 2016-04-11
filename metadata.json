@@ -1,6 +1,6 @@
 {
   "name": "b3n4kh-owncloud",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "b3n4kh",
   "summary": "Install owncloud to be serverd with a postgresql database behind a nginx reverseproxy",
   "license": "Beerware",
