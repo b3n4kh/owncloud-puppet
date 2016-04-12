@@ -8,6 +8,7 @@ class owncloud (
   $db_pass         = $::owncloud::params::db_pass,
   $db_user         = $::owncloud::params::db_user,
   $db_type         = $::owncloud::params::db_type,
+  $documentroot    = $::owncloud::params::documentroot,
   $manage_db       = $::owncloud::params::manage_db,
   $manage_repo     = $::owncloud::params::manage_repo,
   $nginx_vhosts    = $::owncloud::params::nginx_vhosts,
@@ -22,13 +23,13 @@ class owncloud (
   validate_absolute_path($sslkey)
   validate_absolute_path($sslcert)
 
-  file { "${::owncloud::documentroot}/config":
+  file { "${documentroot}/config":
     ensure => directory,
     owner  => $www_user,
     group  => $www_group,
   }
 
-  file { "${::owncloud::documentroot}/config/autoconfig.php":
+  file { "${documentroot}/config/autoconfig.php":
     ensure  => present,
     owner   => $www_user,
     group   => $www_group,

@@ -8,7 +8,7 @@ class owncloud::install {
         include ::epel
 
         yumrepo { 'ownCloud:stable':
-          name     => 'owncloud stable',
+          name     => 'owncloud-stable',
           descr    => "ownCloud Server Version stable (CentOS_7)",
           baseurl  => "http://download.owncloud.org/download/repositories/stable/CentOS_7",
           gpgcheck => 1,

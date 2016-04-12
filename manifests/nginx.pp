@@ -1,12 +1,12 @@
 #Configure owncloud nginx vhost
 class owncloud::nginx (
-  $vhosts     = [ $name ],
-  $sslkey     = undef,
-  $sslcert    = undef
+    $vhosts     = [ $name ],
+    $sslkey     = undef,
+    $sslcert    = undef
   ) {
 
   php::fpm::pool { 'owncloud':
-    listen => '127.0.0.1:9000',
+    listen => '127.0.0.1:9001',
   }
 
   class { 'nginx': }
@@ -14,7 +14,7 @@ class owncloud::nginx (
   nginx::resource::upstream { 'php-handler':
     ensure      => present,
     members     => [
-      '172.0.0.1:9000',
+      '127.0.0.1:9001',
     ]
   }
 
@@ -23,8 +23,8 @@ class owncloud::nginx (
     ssl_cert             => $sslcert,
     ssl_key              => $sslkey,
     server_name          => $vhosts,
-    root                 => '/var/www/html',
-    include_flies        => [ '/etc/nginx/managed/owncloud.conf' ],
+    www_root             => '/var/www/html/owncloud',
+    include_files        => [ '/etc/nginx/managed/owncloud.conf' ],
     use_default_location => false
   }
 
