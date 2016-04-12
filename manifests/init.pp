@@ -41,7 +41,6 @@ class owncloud (
     dbuser     => $db_user,
     dbpassword => $db_pass
   } ->
-  class { '::owncloud::apache': } ->
   class { '::owncloud::nginx':
     vhosts  => $nginx_vhosts,
     sslkey  => $sslkey,
