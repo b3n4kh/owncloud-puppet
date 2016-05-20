@@ -8,9 +8,9 @@ class owncloud::nginx (
   php::fpm::pool { 'owncloud':
     listen => '127.0.0.1:9001',
     php_admin_value => {
-      'upload_max_filesize' => '100M'
-      'post_max_size' 		 => '100M'
-	 }
+      'upload_max_filesize' => '100M',
+      'post_max_size'       => '100M'
+    }
   }
 
   class { 'nginx': }
