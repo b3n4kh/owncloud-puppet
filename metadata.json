@@ -8,7 +8,9 @@
   "project_page": "https://github.com/b3n4kh/owncloud-puppet",
   "issues_url": "https://github.com/b3n4kh/owncloud-puppet/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-postgresql","version_requirement":">= 1.0.0"},
+    {"name":"mayflower-php","version_requirement":">= 1.0.0"}
   ]
 }
 

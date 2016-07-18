@@ -28,7 +28,7 @@ class owncloud::nginx (
     ssl_key              => $sslkey,
     ssl_dhparam          => '/etc/nginx/dhparam.pem',
     server_name          => $vhosts,
-	 rewrite_to_https     => true,
+	  rewrite_to_https     => true,
     www_root             => '/var/www/html/owncloud',
     include_files        => [ '/etc/nginx/managed/owncloud.conf' ],
     use_default_location => false
