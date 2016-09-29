@@ -4,7 +4,7 @@
 #
 class owncloud::apache {
 
-  class { 'apache':
+  class { ::apache:
     template => 'owncloud/httpd.conf.erb',
   }
 }
