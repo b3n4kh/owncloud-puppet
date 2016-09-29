@@ -16,4 +16,5 @@ class owncloud::params {
   $sslkey          = '/etc/pki/tls/private/owncloud.key'
   $www_user        = 'nginx'
   $www_group       = 'nginx'
+  $upload_max_filesize = '200M'
 }

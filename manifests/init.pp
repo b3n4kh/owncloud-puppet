@@ -16,6 +16,7 @@ class owncloud (
   $sslkey          = $::owncloud::params::sslkey,
   $www_user        = $::owncloud::params::www_user,
   $www_group       = $::owncloud::params::www_group,
+  $upload_max_filesize = $::owncloud::params::upload_max_filesize,
   $package_name    = 'owncloud'
 ) inherits ::owncloud::params {
   validate_bool($manage_db)
@@ -45,7 +46,8 @@ class owncloud (
   class { '::owncloud::nginx':
     vhosts  => $nginx_vhosts,
     sslkey  => $sslkey,
-    sslcert => $sslcert
+    sslcert => $sslcert,
+    upload_max_filesize => $upload_max_filesize
   } ->
   Class['::owncloud']
 

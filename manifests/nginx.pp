@@ -3,7 +3,7 @@ class owncloud::nginx (
     $vhosts     = [ $name ],
     $sslkey     = undef,
     $sslcert    = undef,
-    $upload_max_filesize = '100M'
+    $upload_max_filesize = undef
   ) {
 
   php::fpm::pool { 'owncloud':
