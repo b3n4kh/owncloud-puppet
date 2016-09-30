@@ -11,7 +11,7 @@
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
     {"name":"puppetlabs-postgresql","version_requirement":">= 4.0.0"},
     {"name":"mayflower-php","version_requirement":">= 3.0.0"},
-    {"name":"jfryman-nginx","version_requirement":">= 0.3.0"},
+    {"name":"puppet-nginx","version_requirement":">= 0.3.0"},
     {"name":"example42-apache","version_requirement":">= 2.0.0"}
   ]
 }
