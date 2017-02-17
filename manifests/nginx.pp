@@ -23,7 +23,7 @@ class owncloud::nginx (
     ]
   }
 
-  nginx::resource::vhost { 'owncloud':
+  nginx::resource::server { 'owncloud':
     ssl                  => true,
     ssl_cert             => $sslcert,
     ssl_key              => $sslkey,
